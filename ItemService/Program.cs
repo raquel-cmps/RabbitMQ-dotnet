@@ -1,4 +1,3 @@
-using ItemService.AsyncDataServices;
 using ItemService.Data;
 using ItemService.EventProcessor;
 using ItemService.RabbitMqClient;

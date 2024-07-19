@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using RestauranteService.AsyncDataServices;
 using RestauranteService.Data;
 using RestauranteService.Http;
 using RestauranteService.RabbitMqClient;

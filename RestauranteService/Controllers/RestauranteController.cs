@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using RestauranteService.AsyncDataServices;
 using RestauranteService.Data;
 using RestauranteService.Dtos;
 using RestauranteService.Http;
