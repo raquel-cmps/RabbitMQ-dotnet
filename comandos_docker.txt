@@ -1,0 +1,18 @@
+buildando = docker build -t restauranteservice:1.0 .
+	    docker build -t itemservice:1.0 .
+
+criando rede = docker network create --driver bridge restaurante-bridge
+
+executar rabbitmq = docker run -d --hostname rabbitmq-service --name rabbitmq-service --network restaurante-bridge rabbitmq:3-management
+
+executar itemservice = docker run --name item-service -d -p 8080:80 --network restaurante-bridge itemservice:1.2
+
+executar restauranteservice = docker run --name restaurante-service -d -p 8081:80 --network restaurante-bridge restauranteservice:1.7
+
+container do banco = docker run --name=mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:5.6
+entrar no bash do banco = docker exec -it 12db8a56bed bash /////////// mysql -u root -proot
+
+
+
+parar todos os containers = docker stop $(docker ps -aq)
+remover todos os containers = docker rm $(docker ps -aq)
